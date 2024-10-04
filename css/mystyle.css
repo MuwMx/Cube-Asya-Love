@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden
+}
+
+body{
+	background: rgb(214,174,238);
+background: radial-gradient(circle, rgba(214,174,238,1) 8%, rgba(233,148,148,1) 50%, rgba(233,148,225,1) 81%);
+}
+
+li {
+    list-style: none;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 300px auto;
+    transform-style: preserve-3d;
+    transform: rotateX(13deg);
+    animation: move 5s linear infinite;
+}
+
+.btn:hover {
+    background-position: 100% 0;
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+    transition: all .4s ease-in-out;
+}
+
+.btn {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+    transition: all .4s ease-in-out;
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+.minbox {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    transform-style: preserve-3d;
+}
+
+.minbox li {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.minbox li:nth-child(1) {
+    transform: translateZ(50px);
+    background-size: cover;
+}
+
+.minbox li:nth-child(2) {
+    transform: rotateX(180deg) translateZ(50px);
+    background-size: cover;
+}
+
+.minbox li:nth-child(3) {
+    transform: rotateX(-90deg) translateZ(50px);
+    background-size: cover;
+}
+
+.minbox li:nth-child(4) {
+    transform: rotateX(90deg) translateZ(50px);
+    background-size: cover;
+}
+
+.minbox li:nth-child(5) {
+    transform: rotateY(-90deg) translateZ(50px);
+    background-size: cover;
+}
+
+.minbox li:nth-child(6) {
+    transform: rotateY(90deg) translateZ(50px);
+    background-size: cover;
+}
+
+.maxbox li:nth-child(1) {
+    transform: translateZ(50px);
+    background-size: 100% 100%;
+    transform: translateZ(100px);
+}
+
+.maxbox li:nth-child(2) {
+    transform: rotateX(180deg) translateZ(100px);
+    background-size: 100% 100%;
+}
+
+.maxbox li:nth-child(3) {
+    transform: rotateX(-90deg) translateZ(100px);
+    background-size: 100% 100%;
+}
+
+.maxbox li:nth-child(4) {
+    transform: rotateX(90deg) translateZ(100px);
+    background-size: 100% 100%;
+}
+
+.maxbox li:nth-child(5) {
+    transform: rotateY(-90deg) translateZ(100px);
+    background-size: 100% 100%;
+}
+
+.maxbox li:nth-child(6) {
+    transform: rotateY(90deg) translateZ(100px);
+    background-size: 100% 100%;
+}
+
+.maxbox li:nth-child(4) {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.maxbox li:nth-child(5) {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.maxbox li:nth-child(6) {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.maxbox {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+}
+
+.maxbox li {
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.2;
+    transition: all 1s ease;
+}
+
+.box:hover ol li:nth-child(1) {
+    transform: translateZ(300px);
+    width: 400px;
+    height: 400px;
+    opacity: 0.8;
+    left: -100px;
+    top: -100px;
+}
+
+.box:hover ol li:nth-child(2) {
+    transform: rotateX(180deg) translateZ(300px);
+    width: 400px;
+    height: 400px;
+    opacity: 0.8;
+    left: -100px;
+    top: -100px;
+}
+
+.box:hover ol li:nth-child(3) {
+    transform: rotateX(-90deg) translateZ(300px);
+    width: 400px;
+    height: 400px;
+    opacity: 0.8;
+    left: -100px;
+    top: -100px;
+}
+
+.box:hover ol li:nth-child(4) {
+    transform: rotateX(90deg) translateZ(300px);
+    width: 400px;
+    height: 400px;
+    opacity: 0.8;
+    left: -100px;
+    top: -100px;
+}
+
+.box:hover ol li:nth-child(5) {
+    transform: rotateY(-90deg) translateZ(300px);
+    width: 400px;
+    height: 400px;
+    opacity: 0.8;
+    left: -100px;
+    top: -100px;
+}
+
+.box:hover ol li:nth-child(6) {
+    transform: rotateY(90deg) translateZ(300px);
+    width: 400px;
+    height: 400px;
+    opacity: 0.8;
+    left: -100px;
+    top: -100px;
+}
+
+@keyframes move {
+    0% {
+        transform: rotateX(13deg) rotateY(0deg);
+    }
+    25% {
+        transform: rotateX(26deg) rotateY(90deg);
+    }
+    50% {
+        transform: rotateX(50deg) rotateY(180deg);
+    }
+    75% {
+        transform: rotateX(26deg) rotateY(270deg);
+    }
+    100% {
+        transform: rotateX(13deg) rotateY(360deg);
+    }
+}
